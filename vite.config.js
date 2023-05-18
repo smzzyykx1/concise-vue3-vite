@@ -4,8 +4,8 @@ import eslintPlugin from 'vite-plugin-eslint' //导入包
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(),
-    eslintPlugin({
-      include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
-    })],
+    plugins: [vue(),
+        eslintPlugin({
+            include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
+        })],
 })
