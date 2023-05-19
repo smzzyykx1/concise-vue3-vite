@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 // 首页
 import index from '@src/pages/index.vue';
 // 404判断页面
@@ -12,16 +12,16 @@ const routes = [
     { path: '/index', name: 'index', component: index },
     { path: '/login', name: 'login', component: login },
     // 404页面
-    { path: '/:pathMatch(.*)*', name: 'notFound', component: notFound },
+    { path: '/:pathMatch(.*)*', name: 'notFound', component: notFound }
 ];
 
 // 创建路由实例并传递 `routes` 配置
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes,
+    history: createWebHistory(),
+    routes
 });
 // 路由导航守卫
-router.beforeEach((to,from,next) => {
+router.beforeEach((to, from, next) => {
     // 这里需要写是否登陆过的判断逻辑
     next();
 });
