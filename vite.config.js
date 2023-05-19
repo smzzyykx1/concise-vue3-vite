@@ -10,9 +10,22 @@ export default defineConfig({
             include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
         })],
     resolve: {
-        'map': [
-            ['@src', path.resolve(__dirname, './src')]
-        ]
+        alias: {
+            '@src': path.resolve(__dirname, './src')
+        }
+    },
+    // 配置开发环境代理
+    server: {
+        proxy: {
+            // 字符串简写写法：http://localhost:5173/foo -> http://localhost:4567/foo
+            // '/foo': 'http://localhost:4567',
+            // 带选项写法：http://localhost:5173/api/bar -> http://jsonplaceholder.typicode.com/bar
+            '/api': {
+                target: 'http://jsonplaceholder.typicode.com',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api/, ''),
+            },
+        },
     },
     // 引入less
     css: {

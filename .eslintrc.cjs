@@ -20,6 +20,7 @@ module.exports = {
     },
     // 这里时配置规则的,自己看情况配置
     'rules': {
+        //off = 0 warn = 1 error = 2
         // 'semi': ['warn', 'never'], // 禁止尾部使用分号
         'semi': 'warn', // 要求尾部使用分号
         // 'no-console': 'warn', // 禁止出现console
@@ -57,9 +58,13 @@ module.exports = {
         'switch-colon-spacing': 'warn', // 要求在switch的冒号左右有空格
         'arrow-spacing': 'warn', // 要求箭头函数的箭头前后使用一致的空格
         'array-bracket-spacing': 'warn', // 要求数组方括号中使用一致的空格
+        'computed-property-spacing': 'warn',// 强制在计算的属性的方括号中使用一致的空格
+        'object-curly-spacing': ['warn','always'],// 强制在花括号中使用一致的空格
+        'semi-spacing': 'warn', // 强制分号之前和之后使用一致的空格
         'brace-style': 'warn', // 要求在代码块中使用一致的大括号风格
         'camelcase': 'warn', // 要求使用骆驼拼写法命名约定
         'indent': ['warn', 4], // 要求使用JS一致缩进4个空格
+        'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }], //对象字面量中冒号的前后空格
         'max-depth': ['warn', 4], // 要求可嵌套的块的最大深度4
         'max-statements': ['warn', 100], // 要求函数块最多允许的的语句数量20
         'max-nested-callbacks': ['warn', 3], // 要求回调函数最大嵌套深度3
@@ -68,6 +73,7 @@ module.exports = {
         'vue/require-default-prop': 0, // 关闭属性参数必须默认值
         'vue/singleline-html-element-content-newline': 0, // 关闭单行元素必须换行符
         'vue/multiline-html-element-content-newline': 0, // 关闭多行元素必须换行符
+        'vue/multi-word-component-names': 'off', // 关闭文明名称校验
         // 要求每一行标签的最大属性不超五个
         'vue/max-attributes-per-line': ['warn', { singleline: 5 }],
         // 要求html标签的缩进为需要2个空格
