@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 // 首页
 import index from '@src/pages/index.vue';
 // 404判断页面
@@ -17,7 +17,7 @@ const routes = [
 
 // 创建路由实例并传递 `routes` 配置
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
 // 路由导航守卫
