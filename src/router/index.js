@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 // 首页
-import index from '@src/pages/index.vue';
+import index from '@src/pages/index/index.vue';
 // 404判断页面
 import notFound from '@src/pages/notFound/index.vue';
 import login from '@src/pages/login/index.vue';

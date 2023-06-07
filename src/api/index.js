@@ -5,8 +5,8 @@ const service = axios.create({
     baseURL: '',
     timeout: 5000,
     headers: {
-        'Content-Type': 'application/json',
-    },
+        'Content-Type': 'application/json'
+    }
 });
 // 请求拦截器
 service.interceptors.request.use(config => {

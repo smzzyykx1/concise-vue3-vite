@@ -23,8 +23,8 @@ module.exports = {
         //off = 0 warn = 1 error = 2
         // 'semi': ['warn', 'never'], // 禁止尾部使用分号
         'semi': 'warn', // 要求尾部使用分号
-        // 'no-console': 'warn', // 禁止出现console
-        // 'no-debugger': 'warn', // 禁止出现debugger
+        'no-console': 'warn', // 禁止出现console
+        'no-debugger': 'warn', // 禁止出现debugger
         'no-duplicate-case': 'warn', // 禁止出现重复case
         'no-empty': 'warn', // 禁止出现空语句块
         'no-extra-parens': 'warn', // 禁止不必要的括号
@@ -62,7 +62,7 @@ module.exports = {
         'object-curly-spacing': ['warn', 'always'], // 强制在花括号中使用一致的空格
         'semi-spacing': 'warn', // 强制分号之前和之后使用一致的空格
         'brace-style': 'warn', // 要求在代码块中使用一致的大括号风格
-        'camelcase': 'warn', // 要求使用骆驼拼写法命名约定
+        // 'camelcase': 'warn', // 要求使用骆驼拼写法命名约定
         'indent': ['warn', 4], // 要求使用JS一致缩进4个空格
         'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }], //对象字面量中冒号的前后空格
         'max-depth': ['warn', 4], // 要求可嵌套的块的最大深度4
@@ -78,6 +78,13 @@ module.exports = {
         'comma-spacing': ['warn', { 'before': false, 'after': true }], //规则在变量声明，数组文字，对象文字，函数参数和序列中的逗号前后加上一致的间距
         // 要求每一行标签的最大属性不超五个
         'vue/max-attributes-per-line': ['warn', { singleline: 5 }],
+        'vue/v-on-event-hyphenation': ['off', 'always', {
+            'autofix': true,
+            'ignore': []
+        }], //此规则强制在 Vue 模板中的自定义组件上使用带连字符的 v-on 事件名称。
+        'vue/attribute-hyphenation': ['off', 'always', {
+            'ignore': []
+        }], //此规则强制在 Vue 模板中的自定义组件上使用带连字符的属性名称。
         // 要求html标签的缩进为需要2个空格
         'vue/html-indent': ['warn', 2, {
             'attribute': 1,
