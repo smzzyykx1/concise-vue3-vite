@@ -3,16 +3,16 @@ const store = createStore({
     state() {
         return {
             //用户信息
-            user: {},
+            user: {}
         };
     },
     mutations: {
         setUserIfon(state, info) {
             state.user = info;
-        },
+        }
     },
     // vuex模块化设置
-    modules: {},
+    modules: {}
 });
 
 export default store;

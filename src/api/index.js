@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ElMessage } from 'element-plus';
 const service = axios.create({
     // 配置域名
-    baseURL: '',
+    baseURL: import.meta.env.VITE_API_URL,
     timeout: 5000,
     headers: {
         'Content-Type': 'application/json'

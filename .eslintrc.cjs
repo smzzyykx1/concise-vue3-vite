@@ -18,7 +18,7 @@ module.exports = {
         defineExpose: 'readonly',
         withDefaults: 'readonly'
     },
-    // 这里时配置规则的,自己看情况配置
+    // 这里是配置规则的,根据项目情况配置
     'rules': {
         //off = 0 warn = 1 error = 2
         // 'semi': ['warn', 'never'], // 禁止尾部使用分号
