@@ -20,7 +20,7 @@ module.exports = {
     },
     // 这里是配置规则的,根据项目情况配置
     'rules': {
-        //off = 0 warn = 1 error = 2
+        // off = 0 warn = 1 error = 2
         // 'semi': ['warn', 'never'], // 禁止尾部使用分号
         'semi': 'warn', // 要求尾部使用分号
         'no-console': 'warn', // 禁止出现console
@@ -55,6 +55,7 @@ module.exports = {
         'space-in-parens': 'warn', // 要求在圆括号内使用一致的空格
         'space-infix-ops': 'warn', // 要求操作符周围有空格
         'space-unary-ops': 'warn', // 要求在一元操作符前后使用一致的空格
+        'spaced-comment': 'warn', // 要求在注释后使用空格
         'switch-colon-spacing': 'warn', // 要求在switch的冒号左右有空格
         'arrow-spacing': 'warn', // 要求箭头函数的箭头前后使用一致的空格
         'array-bracket-spacing': 'warn', // 要求数组方括号中使用一致的空格
@@ -64,7 +65,9 @@ module.exports = {
         'brace-style': 'warn', // 要求在代码块中使用一致的大括号风格
         // 'camelcase': 'warn', // 要求使用骆驼拼写法命名约定
         'indent': ['warn', 4], // 要求使用JS一致缩进4个空格
-        'key-spacing': ['warn', { 'beforeColon': false, 'afterColon': true }], //对象字面量中冒号的前后空格
+        'key-spacing': ['warn', {
+            'beforeColon': false, 'afterColon': true
+        }], // 对象字面量中冒号的前后空格
         'max-depth': ['warn', 4], // 要求可嵌套的块的最大深度4
         'max-statements': ['warn', 300], // 要求函数块最多允许的的语句数量300
         'max-nested-callbacks': ['warn', 5], // 要求回调函数最大嵌套深度5
@@ -75,16 +78,16 @@ module.exports = {
         'vue/multiline-html-element-content-newline': 0, // 关闭多行元素必须换行符
         'vue/multi-word-component-names': 'off', // 关闭文明名称校验
         'comma-dangle': ['warn', 'never'], // 对象后不允许尾随逗号
-        'comma-spacing': ['warn', { 'before': false, 'after': true }], //规则在变量声明，数组文字，对象文字，函数参数和序列中的逗号前后加上一致的间距
+        'comma-spacing': ['warn', {
+            'before': false, 'after': true
+        }], // 规则在变量声明，数组文字，对象文字，函数参数和序列中的逗号前后加上一致的间距
         // 要求每一行标签的最大属性不超五个
         'vue/max-attributes-per-line': ['warn', { singleline: 5 }],
         'vue/v-on-event-hyphenation': ['off', 'always', {
             'autofix': true,
             'ignore': []
-        }], //此规则强制在 Vue 模板中的自定义组件上使用带连字符的 v-on 事件名称。
-        'vue/attribute-hyphenation': ['off', 'always', {
-            'ignore': []
-        }], //此规则强制在 Vue 模板中的自定义组件上使用带连字符的属性名称。
+        }], // 此规则强制在 Vue 模板中的自定义组件上使用带连字符的 v-on 事件名称。
+        'vue/attribute-hyphenation': ['off', 'always', { 'ignore': [] }], // 此规则强制在 Vue 模板中的自定义组件上使用带连字符的属性名称。
         // 要求html标签的缩进为需要2个空格
         'vue/html-indent': ['warn', 2, {
             'attribute': 1,

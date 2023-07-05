@@ -9,22 +9,35 @@ const service = axios.create({
     }
 });
 // 请求拦截器
-service.interceptors.request.use(config => {
-    console.log(config);
-    return config;
-}, error => {
-    Promise.reject(error);
-});
-//相应拦截器
-service.interceptors.response.use(res => {
-    if (res.data.code !== 200) {
-        ElMessage.error('返回码不等于200');
-        return Promise.reject(res);
+service.interceptors.request.use(
+    (config) => {
+        console.log(config);
+        return config;
+    },
+    (error) => {
+        Promise.reject(error);
     }
-    return res.data;
-}, error => {
-    ElMessage.error('网络异常');
-    Promise.reject(error);
-});
+);
+// 接口白名单
+const apiWhiteList = ['/api/User/User_Login', '/api/User/User_CheckMobile'];
+// 响应拦截器
+service.interceptors.response.use(
+    (res) => {
+    // 增加接口白名单，隔离一些特定接口不用统一处理错误结果，如login页面
+        if (res.data.errorCode !== 200 && !apiWhiteList.includes(res.config.url)) {
+            ElMessage.error(res.data.msg);
+            // return Promise.reject(res);
+            return { ...res.data };
+        }
+        return { ...res.data };
+    },
+    (error) => {
+    // 登录超时跳转登录页
+        ElMessage.error('网络异常');
+        return { ...error.response.data };
+
+        // Promise.reject(error);
+    }
+);
 
 export default service;

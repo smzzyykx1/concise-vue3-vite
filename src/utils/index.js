@@ -12,7 +12,7 @@ export function getUuiD(randomLength) {
     return random(1, true).toString().substring(2, 18) + dayjs().valueOf();
 }
 
-//将数字转化三位一个逗号，可以转换金额，第二个参数带边小数点后位数
+// 将数字转化三位一个逗号，可以转换金额，第二个参数带边小数点后位数
 export function toCountNumber(num, fractionDigits) {
     let sNum = Number(num);
 
