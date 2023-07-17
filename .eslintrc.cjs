@@ -23,7 +23,7 @@ module.exports = {
         // off = 0 warn = 1 error = 2
         // 'semi': ['warn', 'never'], // 禁止尾部使用分号
         'semi': 'error', // 要求尾部使用分号
-        'no-console': 'error', // 禁止出现console
+        'no-console': 'warn', // 禁止出现console
         'no-debugger': 'warn', // 禁止出现debugger
         'no-duplicate-case': 'warn', // 禁止出现重复case
         'no-empty': 'warn', // 禁止出现空语句块
