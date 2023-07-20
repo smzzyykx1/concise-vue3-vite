@@ -3,7 +3,7 @@
 </template>
 <script setup></script>
 <style scoped lang="less">
-.index{
+.index {
   font-size: 100px;
 }
 </style>

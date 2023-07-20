@@ -11,6 +11,14 @@
 https://zhuanlan.zhihu.com/p/611951084
 
 npm i 引入项目依赖
+## vscode插件配置
+请下载esLint，styleLint插件。
+并且在vscode的设置中添加
+// 根据stylelint和eslint保存自动格式化
+"editor.codeActionsOnSave": {
+  "source.fixAll.stylelint": true,
+  "source.fixAll.eslint": true
+}
 ### 构建
 npm run build
 

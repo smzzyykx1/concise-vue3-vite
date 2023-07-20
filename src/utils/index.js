@@ -6,7 +6,7 @@ import { dayjs } from 'element-plus';
  * @param { Number } randomLength 获取的随机数长度最大16
  */
 export function getUuiD(randomLength) {
-    if(randomLength <= 16) {
+    if (randomLength <= 16) {
         return random(1, true).toString().substring(2, randomLength + 2) + dayjs().valueOf();
     }
     return random(1, true).toString().substring(2, 18) + dayjs().valueOf();
@@ -16,7 +16,7 @@ export function getUuiD(randomLength) {
 export function toCountNumber(num, fractionDigits) {
     let sNum = Number(num);
 
-    if(isNaN(sNum)) {
+    if (isNaN(sNum)) {
         sNum = Number(0);
     }
 

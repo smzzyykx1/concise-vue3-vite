@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
   <el-result
     icon="warning"
@@ -12,6 +9,5 @@
     </template>
   </el-result>
 </template>
-
-<style scoped lang="less">
-</style>
+<script setup>
+</script>

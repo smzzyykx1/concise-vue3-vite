@@ -20,7 +20,8 @@ module.exports = {
                 'wip', // 开发中
                 'workflow', // 工作流改进
                 'types', // 类型修改
-                'release'
+                'release',
+                'reviewfix' // 修改评审问题
             ]
         ],
         'type-case': [0],
