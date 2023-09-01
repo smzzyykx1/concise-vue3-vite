@@ -4,7 +4,7 @@ import App from './App.vue';
 // 全局引入elementPlus
 import ElementPlus from 'element-plus';
 // 引入element中文包
-import zhCn from 'element-plus/lib/locale/lang/zh-cn';
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 // 挂载router
 import router from './router';

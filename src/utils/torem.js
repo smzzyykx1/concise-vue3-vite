@@ -1,4 +1,5 @@
 import { debounce } from 'lodash';
+import store from '../store/index';
 // 以1920px 底图为准开发页面
 const baseSize = 14;
 export const setDomFontSize = () => {
@@ -10,14 +11,18 @@ export const setDomFontSize = () => {
     if (userAgent.indexOf('Chrome') > -1 || userAgent.indexOf('Opera') > -1) {
         if (fontSize < 12) {
             const zoomScale = fontSize / 12;
+            // 因为缩放到12以下用zoom所以比例直接用12 / 14
+            store.commit('setScaleWidth', 12 / 14);
             // 小于12px时判断比12小多少然后等比缩放
             document.getElementsByTagName('html')[0].style.zoom = zoomScale;
             document.documentElement.style.fontSize = '12px';
         } else {
+            store.commit('setScaleWidth', scale);
             document.getElementsByTagName('html')[0].style.zoom = 1;
             document.documentElement.style.fontSize = fontSize + 'px';
         }
     } else {
+        store.commit('setScaleWidth', scale);
         document.documentElement.style.fontSize = fontSize + 'px';
     }
 };
