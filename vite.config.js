@@ -5,10 +5,12 @@ import path from 'path';
 import autoprefixer from 'autoprefixer';
 import postCssPxToRem from 'postcss-pxtorem';
 import stylelitPlugin from 'vite-plugin-stylelint';
+import vueJsx from '@vitejs/plugin-vue-jsx'; // 配置vue使用jsx
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         vue(),
+        vueJsx(),
         eslintPlugin(),
         stylelitPlugin({ fix: true })
     ],
@@ -52,7 +54,7 @@ export default defineConfig({
                         'ie >= 8',
                         'last 10 versions'
                     ],
-                    grid: true
+                    grid: false
                 }),
                 postCssPxToRem({
                     // 注意只改变css中的，style中的不进行转换

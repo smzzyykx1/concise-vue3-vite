@@ -1,10 +1,11 @@
 {
-  "name": "salesdriver-enterprise-database-ui",
+  "name": "concise-vue3-vite",
   "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-test": "vite build --mode test",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js --fix",
     "prepare": "husky install",
@@ -25,6 +26,7 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@vitejs/plugin-vue": "^4.1.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.40.0",
     "eslint-plugin-vue": "^9.13.0",

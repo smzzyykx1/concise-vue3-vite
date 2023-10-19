@@ -12,6 +12,12 @@ module.exports = {
     'plugins': [
         'vue' // 引入vue的插件 vue <==> eslint-plugin-vue
     ],
+    'parser': 'vue-eslint-parser',
+    'parserOptions': {
+        'ecmaFeatures': {
+            'jsx': true
+        }
+    },
     'globals': {
         defineProps: 'readonly',
         defineEmits: 'readonly',
@@ -69,7 +75,7 @@ module.exports = {
         'key-spacing': ['error', {
             'beforeColon': false, 'afterColon': true
         }], // 对象字面量中冒号的前后空格
-        'max-depth': ['warn', 4], // 要求可嵌套的块的最大深度4
+        'max-depth': ['warn', 5], // 要求可嵌套的块的最大深度5
         'max-statements': ['warn', 300], // 要求函数块最多允许的的语句数量300
         'max-nested-callbacks': ['warn', 5], // 要求回调函数最大嵌套深度5
         'max-statements-per-line': ['warn', { max: 1 }], // 要求每一行中所允许的最大语句数量
