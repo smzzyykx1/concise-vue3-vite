@@ -51,6 +51,8 @@ module.exports = {
     "media-feature-colon-space-after": "always",
     // 媒体查询中设置断点宽度里的 ":" 前不能有空格
     "media-feature-colon-space-before": "never",
+    // 媒体查询中不需要转换min-width的写法
+    "media-feature-range-notation": null,
     // 指定类选择器的模式兼容elementui命名
     "selector-class-pattern": [
       "^([a-z0-9][a-z0-9]*)((-*|_*)[a-z0-9]+)*$",
