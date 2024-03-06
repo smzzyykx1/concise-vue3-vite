@@ -1,6 +1,7 @@
 export default {
   extends: [
     "stylelint-config-standard",
+    "stylelint-config-recommended-scss",
     "stylelint-config-recommended-vue",
     "stylelint-config-rational-order", // 排序插件
     "@stylistic/stylelint-config", // stylelint 16版本兼容老规则插件
@@ -18,6 +19,7 @@ export default {
   ],
   // 可以使用deep
   rules: {
+    "import-notation":'string',
     "@stylistic/indentation": 2, // 缩进 4 个空格
     "@stylistic/declaration-block-trailing-semicolon": "always", //每个属性声明末尾都要加分号
     // 每个样式规则前后都有空行，除了第一条规则、规则前有注释、或者嵌套规则
