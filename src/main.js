@@ -11,7 +11,7 @@ import router from './router';
 import store from './store/index';
 import { setDomFontSize, notZoomStyle } from './utils/torem.js';
 // 引入全局样式
-import './assets/css/reset.less';
+import './assets/css/reset.scss';
 import 'element-plus/dist/index.css';
 const app = createApp(App);
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
