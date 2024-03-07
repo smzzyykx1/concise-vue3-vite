@@ -5,7 +5,7 @@
 </script>
 <style scoped lang="scss">
 .index {
-  width: 200px;
+  width: 300px;
   font-size: 100px;
 }
 </style>
