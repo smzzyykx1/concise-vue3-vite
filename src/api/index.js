@@ -11,7 +11,6 @@ const service = axios.create({
 // 请求拦截器
 service.interceptors.request.use(
     (config) => {
-        console.log(config);
         return config;
     },
     (error) => {
@@ -19,14 +18,13 @@ service.interceptors.request.use(
     }
 );
 // 接口白名单
-const apiWhiteList = ['/api/User/User_Login', '/api/User/User_CheckMobile'];
+const apiWhiteList = [];
 // 响应拦截器
 service.interceptors.response.use(
     (res) => {
     // 增加接口白名单，隔离一些特定接口不用统一处理错误结果，如login页面
         if (res.data.errorCode !== 200 && !apiWhiteList.includes(res.config.url)) {
             ElMessage.error(res.data.msg);
-            // return Promise.reject(res);
             return { ...res.data };
         }
         return { ...res.data };
@@ -35,8 +33,6 @@ service.interceptors.response.use(
     // 登录超时跳转登录页
         ElMessage.error('网络异常');
         return { ...error.response.data };
-
-        // Promise.reject(error);
     }
 );
 

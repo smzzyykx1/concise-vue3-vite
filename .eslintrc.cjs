@@ -22,7 +22,8 @@ module.exports = {
         defineProps: 'readonly',
         defineEmits: 'readonly',
         defineExpose: 'readonly',
-        withDefaults: 'readonly'
+        withDefaults: 'readonly',
+        define: 'readonly'
     },
     // 这里是配置规则的,根据项目情况配置
     'rules': {
@@ -75,7 +76,7 @@ module.exports = {
         'key-spacing': ['error', {
             'beforeColon': false, 'afterColon': true
         }], // 对象字面量中冒号的前后空格
-        'max-depth': ['warn', 5], // 要求可嵌套的块的最大深度5
+        'max-depth': ['warn', 7], // 要求可嵌套的块的最大深度5
         'max-statements': ['warn', 300], // 要求函数块最多允许的的语句数量300
         'max-nested-callbacks': ['warn', 5], // 要求回调函数最大嵌套深度5
         'max-statements-per-line': ['warn', { max: 1 }], // 要求每一行中所允许的最大语句数量
@@ -112,6 +113,7 @@ module.exports = {
             },
             'svg': 'always',
             'math': 'always'
-        }]
+        }],
+        'vue/no-v-html': 'off'
     }
 };

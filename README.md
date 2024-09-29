@@ -16,9 +16,17 @@ npm i 引入项目依赖
 并且在vscode的设置中添加
 // 根据stylelint和eslint保存自动格式化
 "editor.codeActionsOnSave": {
-  "source.fixAll.stylelint": true,
-  "source.fixAll.eslint": true
-}
+  "source.fixAll.stylelint": "explicit",
+  "source.fixAll.eslint": "explicit"
+},
+"stylelint.validate": ["css", "less", "vue", "scss","sass"],
+"stylelint.snippet": [
+  "css",
+  "less",
+  "postcss",
+  "scss",
+  "sass"
+],
 ### 构建
 npm run build
 
