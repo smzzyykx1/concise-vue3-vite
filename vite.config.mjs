@@ -35,12 +35,8 @@ export default defineConfig({
     // 引入less
     css: {
         preprocessorOptions: {
-            less: {
-                javascriptEnabled: true,
-                additionalData: `@import "${path.resolve(
-                    __dirname,
-                    'src/assets/css/reset.less'
-                )}";`
+            scss: {
+                api: 'modern-compiler' // or 'modern'
             }
         },
         postcss: {
