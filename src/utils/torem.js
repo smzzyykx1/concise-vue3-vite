@@ -11,8 +11,8 @@ export const setDomFontSize = (store) => {
         if (userAgent.indexOf('Chrome') > -1 || userAgent.indexOf('Opera') > -1) {
             if (fontSize < 12) {
                 const zoomScale = fontSize / 12;
-                // 因为缩放到12以下用zoom所以比例直接用14 / 12
-                store.commit('setScaleWidth', 14 / 12);
+                // 因为缩放到12以下用zoom所以比例直接用12 / 14
+                store.commit('setScaleWidth', 12 / 14);
                 // 小于12px时判断比12小多少然后等比缩放
                 document.getElementsByTagName('html')[0].style.zoom = zoomScale;
                 document.documentElement.style.fontSize = '12px';
