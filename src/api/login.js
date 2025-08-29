@@ -1,4 +1,4 @@
-import { service } from './index';
+import service from './index';
 
 // 登录接口
 export const login = (data) => {
